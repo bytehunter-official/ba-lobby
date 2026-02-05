@@ -1,0 +1,58 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="favicon.png">
+    <title>蔚蓝档案学生记忆大厅 | Blue Archive Lobby</title>
+</head>
+<body>
+    <div class="app">
+        <div class="main">
+            <div class="player" id="client">
+
+            </div>
+        </div>
+        <button class="expand" onclick="document.getElementById('sidebar').style.left='0'">
+            <svg class="icon" style="color: white; width: 1em;height: 1em;vertical-align: middle;fill: rgb(255 255 255);overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="11800"><path d="M296.96 0l-81.92 81.92L645.12 512 215.04 942.08l81.92 81.92 512-512z" p-id="11801"></path></svg>
+        </button>
+        <div class="sidebar" id="sidebar">
+            <div class="header">
+                <button class="collapse" onclick="document.getElementById('sidebar').style.left='-100%'">
+                    <svg class="icon" style="color:white; width: 3em;height: 1.5em;vertical-align: middle;background: inherit; fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3273"><path d="M561.17013333 509.06026667L858.02666667 213.73973333c14.03733333-13.968 14.1088-36.60053333 0.1408-50.63786666-13.99893333-14.06826667-36.592-14.10773333-50.62933334-0.1408L510.6048 458.31466667 216.256 163.06986667c-13.9328-13.96693333-36.59733333-14.03733333-50.63466667-0.07146667-14.00426667 13.96586667-14.03733333 36.63146667-0.0704 50.6688l294.27733334 295.1744-296.71466667 295.14026667c-14.0384 13.968-14.1088 36.59733333-0.14293333 50.63786666a35.7216 35.7216 0 0 0 25.3856 10.56c9.13066667 0 18.26666667-3.4688 25.25013333-10.4192l296.78613333-295.2128L807.4304 857.48266667c6.9824 7.02186667 16.15253333 10.53013333 25.35253333 10.53013333a35.72906667 35.72906667 0 0 0 25.28213334-10.45973333c13.99893333-13.96586667 14.03733333-36.592 0.07146666-50.62933334L561.17013333 509.06026667z m0 0" p-id="3274"></path></svg>
+                </button>
+            </div>
+            <div class="content" id="parent">
+                <p class="center medium"><span style="margin: auto"><span data-huge>设置</span><span data-big> / Settings</span></span></p>
+                <p class="left"><span data-medium>记忆大厅模型</span><span data-small> / Lobby Model</span></p>
+                <select name="model-selector" id="model-selector" class="basic-selector">
+                    <option value="none">未选择 / None</option>
+                </select>
+                <p class="left medium"><span data-medium>动画</span><span data-small> / Animation</span></p>
+                <select name="animation" id="animation" class="basic-selector">
+                    <option value="start_idle_01">start_idle_01</option>
+                </select>
+                <p class="left medium"><span data-medium>附加设置</span><span data-small> / Appendixes</span></p>
+                <div class="check">
+                    <input type="checkbox" value="repeat" name="appendixes" id="repeat" checked/>
+                    <span data-small>&emsp;循环播放 / Loop Playing</span>
+                </div>
+                <div class="check">
+                    <input type="checkbox" value="appreciation" name="appendixes" id="appreciation" checked />
+                    <span data-small>&emsp;隐藏底端水印 / Hide Bottom Watermark</span>
+                </div>
+                <div class="check">
+                    <input type="checkbox" value="export" name="appendixes" id="export" />
+                    <span data-small>&emsp;导出为视频 / Export As Videos</span>
+                </div>
+                <div class="comments">
+                    <span data-tiny>*若勾选此项，视频将会在一整轮播放结束后自动启动下载。</span>
+		    <span data-tiny> </span>
+ 		    <span data-tiny>由于服务器位于海外，若选择记忆大厅模型后超过20秒仍然黑屏，请打开加速器后重新加载整个网页。</span>
+                    <span data-tiny>Powered by ByteHunter</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer src="./init.js"></script>
+</body>
+</html>
